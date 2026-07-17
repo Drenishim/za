@@ -1,0 +1,1005 @@
+/*==================================================
+    A LITTLE UNIVERSE FOR ŞEVVAL 💙
+    STYLE.CSS
+    PART 1
+==================================================*/
+
+/*========== RESET ==========*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#ffffff;
+
+    background:
+    linear-gradient(
+        180deg,
+        #020611 0%,
+        #06142c 45%,
+        #0a1d44 100%
+    );
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+}
+
+/*========== BACKGROUND LAYERS ==========*/
+
+#nebula,
+#stars,
+#shootingStars,
+#hearts,
+#confetti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+#nebula{z-index:-5;}
+#stars{z-index:-4;}
+#shootingStars{z-index:-3;}
+#hearts{z-index:-2;}
+#confetti{z-index:100;}
+
+/*========== APP ==========*/
+
+#app{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+/*========== PAGE ==========*/
+
+.page{
+
+    position:absolute;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(25px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        visibility .5s;
+
+}
+
+.page.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/*========== CARD ==========*/
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:min(720px,95vw);
+
+    padding:45px;
+
+    border-radius:26px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+
+        0 0 40px rgba(0,0,0,.45),
+
+        0 0 25px rgba(59,130,246,.15);
+
+}
+
+/*========== TITLES ==========*/
+
+h1{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+h2{
+
+    font-size:34px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+}
+
+/*========== BUTTON GROUP ==========*/
+
+.buttonGroup{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+/*==================================================
+    STYLE.CSS
+    PART 2
+==================================================*/
+
+/*========== BUTTONS ==========*/
+
+button{
+
+    font-family:inherit;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:14px 34px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+    box-shadow:
+        0 0 18px rgba(59,130,246,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 0 28px rgba(96,165,250,.55);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+button:focus-visible{
+
+    outline:2px solid #93c5fd;
+
+    outline-offset:4px;
+
+}
+
+/*========== TEXTAREA ==========*/
+
+textarea{
+
+    width:100%;
+
+    min-height:160px;
+
+    resize:none;
+
+    margin:25px 0;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.06);
+
+    color:#fff;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+textarea:focus{
+
+    border-color:#60a5fa;
+
+    box-shadow:
+
+        0 0 18px rgba(96,165,250,.35);
+
+}
+
+/*========== SPECIAL BUTTONS ==========*/
+
+#girlsBtn{
+
+    position:relative;
+
+}
+
+#onlyUsBtn{
+
+    font-size:22px;
+
+    padding:18px 42px;
+
+    animation:pulse 2s ease-in-out infinite;
+
+}
+
+/*========== HEART PAGE ==========*/
+
+#heartIcon{
+
+    font-size:90px;
+
+    margin-bottom:25px;
+
+    animation:heartbeat 1.6s ease-in-out infinite;
+
+}
+
+#heartTyping{
+
+    min-height:120px;
+
+    line-height:1.8;
+
+}
+
+/*========== QUESTION PAGE ==========*/
+
+#questionTyping{
+
+    min-height:70px;
+
+}
+
+/*========== ENDING ==========*/
+
+#endingTitle{
+
+    margin-bottom:20px;
+
+}
+
+#endingMessage{
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    color:#dbeafe;
+
+}
+
+/*========== ANIMATIONS ==========*/
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        box-shadow:
+            0 0 20px rgba(59,130,246,.4);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        box-shadow:
+            0 0 35px rgba(96,165,250,.7);
+
+    }
+
+}
+/*==================================================
+    STYLE.CSS
+    PART 3
+==================================================*/
+
+/*========== NEBULA ==========*/
+
+#nebula{
+
+    background:
+        radial-gradient(circle at 20% 25%, rgba(59,130,246,.18), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(96,165,250,.15), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.03), transparent 60%);
+
+    animation:nebulaMove 18s ease-in-out infinite alternate;
+
+}
+
+/*========== STARS ==========*/
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+
+    height:2px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:0 0 8px rgba(255,255,255,.9);
+
+    animation:twinkle 2.5s ease-in-out infinite;
+
+}
+
+/*========== SHOOTING STAR ==========*/
+
+.shootingStar{
+
+    position:absolute;
+
+    width:120px;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        transparent
+    );
+
+    transform:rotate(-35deg);
+
+    opacity:.85;
+
+    animation:shoot 2.2s linear forwards;
+
+}
+
+/*========== HEART ==========*/
+
+.floatingHeart{
+
+    position:absolute;
+
+    font-size:18px;
+
+    color:#ff7eb6;
+
+    opacity:.8;
+
+    animation:floatHeart 8s linear forwards;
+
+}
+
+/*========== CONFETTI ==========*/
+
+.confettiPiece{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:2px;
+
+    animation:confettiFall 4s linear forwards;
+
+}
+
+/*========== PLANET ==========*/
+
+.planet{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    opacity:.18;
+
+    filter:blur(.2px);
+
+}
+
+/*========== ANIMATIONS ==========*/
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+@keyframes shoot{
+
+    from{
+
+        transform:
+            translate(0,0)
+            rotate(-35deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+            translate(-900px,700px)
+            rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-260px) scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes confettiFall{
+
+    from{
+
+        transform:translateY(-40px) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(110vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes nebulaMove{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+/*==================================================
+    STYLE.CSS
+    PART 4
+==================================================*/
+
+/*========== CARD EFFECTS ==========*/
+
+.card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 0 45px rgba(0,0,0,.5),
+
+        0 0 30px rgba(96,165,250,.25);
+
+}
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    pointer-events:none;
+
+    box-shadow:
+
+        inset 0 0 30px rgba(255,255,255,.03);
+
+}
+
+/*========== ONLY US BUTTON ==========*/
+
+#onlyUsBtn{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    transition:
+
+        opacity .7s ease,
+
+        transform .7s ease,
+
+        box-shadow .35s ease;
+
+}
+
+#onlyUsBtn.show{
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
+
+/*========== LAST CHANCE ==========*/
+
+#lastChanceText{
+
+    margin-top:28px;
+
+    min-height:30px;
+
+    color:#93c5fd;
+
+    font-size:18px;
+
+    letter-spacing:.5px;
+
+}
+
+/*========== FADE EFFECT ==========*/
+
+.fadeOut{
+
+    animation:fadeOut .7s forwards;
+
+}
+
+.fadeIn{
+
+    animation:fadeIn .7s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*========== SCROLLBAR ==========*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#60a5fa;
+
+}
+
+/*========== SELECTION ==========*/
+
+::selection{
+
+    background:#60a5fa;
+
+    color:#fff;
+
+}
+
+/*========== RESPONSIVE ==========*/
+
+@media (max-width:768px){
+
+    .card{
+
+        width:95%;
+
+        padding:30px;
+
+    }
+
+    h1{
+
+        font-size:40px;
+
+    }
+
+    h2{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+    .buttonGroup{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:32px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    #heartIcon{
+
+        font-size:72px;
+
+    }
+
+    .card{
+
+        padding:24px;
+
+    }
+
+}
+/*==================================================
+    STYLE.CSS
+    PART 5
+==================================================*/
+
+/*========== BACKGROUND BREATH ==========*/
+
+body{
+
+    animation:backgroundBreath 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes backgroundBreath{
+
+    from{
+
+        filter:brightness(1);
+
+    }
+
+    to{
+
+        filter:brightness(1.08);
+
+    }
+
+}
+
+/*========== PLANETS ==========*/
+
+.planet{
+
+    background:
+        radial-gradient(circle at 30% 30%,
+        rgba(255,255,255,.45),
+        rgba(96,165,250,.35),
+        rgba(37,99,235,.18));
+
+    box-shadow:
+
+        0 0 40px rgba(96,165,250,.18);
+
+}
+
+/*========== IMAGES ==========*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/*========== AUDIO ==========*/
+
+audio{
+
+    display:none;
+
+}
+
+/*========== LINKS ==========*/
+
+a{
+
+    color:#93c5fd;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    color:#dbeafe;
+
+}
+
+/*========== USER SELECT ==========*/
+
+button,
+.star,
+.shootingStar,
+.floatingHeart,
+.confettiPiece,
+.planet{
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+}
+
+/*========== PERFORMANCE ==========*/
+
+.page,
+.card,
+button,
+.star,
+.shootingStar,
+.floatingHeart{
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+/*========== END CARD GLOW ==========*/
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:inherit;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.05),
+        transparent,
+        rgba(96,165,250,.08)
+    );
+
+    pointer-events:none;
+
+    opacity:.7;
+
+}
+
+/*========== THE END ==========*/

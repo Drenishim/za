@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Universe For Şevval 💙</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ========= BACKGROUND ========= -->
+
+    <div id="nebula"></div>
+
+    <div id="stars"></div>
+
+    <div id="shootingStars"></div>
+
+    <div id="hearts"></div>
+
+    <div id="confetti"></div>
+
+    <!-- ========= MAIN ========= -->
+
+    <main id="app">
+
+        <!-- ==========================
+             WELCOME
+        =========================== -->
+
+        <section class="page active"
+                 id="welcomePage">
+
+            <div class="card">
+
+                <h1>
+
+                    A Little Universe
+
+                </h1>
+
+                <p class="subtitle">
+
+                    I made something
+                    special just for you.
+
+                </p>
+
+                <button id="startBtn">
+
+                    Click Here 💙
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             INTRO
+        =========================== -->
+
+        <section class="page"
+                 id="introPage">
+
+            <div class="card">
+
+                <h2 id="introTyping"></h2>
+
+                <button id="introContinue">
+
+                    Continue ✨
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             FEELING
+        =========================== -->
+
+        <section class="page"
+                 id="feelingPage">
+
+            <div class="card">
+
+                <h2>
+
+                    How are you feeling?
+
+                </h2>
+
+                <div class="buttonGroup">
+
+                    <button id="goodBtn">
+
+                        😊 Good
+
+                    </button>
+
+                    <button id="badBtn">
+
+                        😔 Bad
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- ==========================
+             REASON
+        =========================== -->
+
+        <section class="page"
+                 id="reasonPage">
+
+            <div class="card">
+
+                <h2>
+
+                    I hope this little universe
+                    makes you smile.
+
+                </h2>
+
+                <p class="subtitle">
+
+                    If you want,
+                    tell me why you're feeling this way.
+
+                </p>
+
+                <textarea id="reasonInput"
+                          placeholder="Write here..."></textarea>
+
+                <button id="sendReasonBtn">
+
+                    Send 💙
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             THANK YOU
+        =========================== -->
+
+        <section class="page"
+                 id="thanksPage">
+
+            <div class="card">
+
+                <h2 id="thanksTyping"></h2>
+
+                <button id="thanksContinue">
+
+                    Continue ✨
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             CHOCOLATE
+        =========================== -->
+
+        <section class="page"
+                 id="chocolatePage">
+
+            <div class="card">
+
+                <h2>
+
+                    Do you like chocolate?
+
+                </h2>
+
+                <div class="buttonGroup">
+
+                    <button id="chocolateYes">
+
+                        🍫 Yes
+
+                    </button>
+
+                    <button id="chocolateNo">
+
+                        🤍 No
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             CHOCOLATE RESULT
+        =========================== -->
+
+        <section class="page"
+                 id="chocolateResultPage">
+
+            <div class="card">
+
+                <h2 id="chocolateResultText"></h2>
+
+                <button id="chocolateContinue">
+
+                    Continue 💙
+
+                </button>
+
+            </div>
+
+        </section>
+                <!-- ==========================
+             CHOICE
+        =========================== -->
+
+        <section class="page"
+                 id="choicePage">
+
+            <div class="card">
+
+                <h2>
+
+                    Do you like boys or girls?
+
+                </h2>
+
+                <div class="buttonGroup"
+                     id="choiceButtons">
+
+                    <button id="boysBtn">
+
+                        💙 Boys (Maybe me?)
+
+                    </button>
+
+                    <button id="girlsBtn">
+
+                        💖 Girls
+
+                    </button>
+
+                </div>
+
+                <p id="lastChanceText"></p>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             ONLY US
+        =========================== -->
+
+        <section class="page"
+                 id="onlyUsPage">
+
+            <div class="card">
+
+                <button id="onlyUsBtn">
+
+                    💙 Now it's just you and me.
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             HEART
+        =========================== -->
+
+        <section class="page"
+                 id="heartPage">
+
+            <div class="card">
+
+                <h1 id="heartIcon">
+
+                    ❤️
+
+                </h1>
+
+                <h2 id="heartTyping"></h2>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             FINAL QUESTION
+        =========================== -->
+
+        <section class="page"
+                 id="questionPage">
+
+            <div class="card">
+
+                <h2 id="questionTyping">
+
+                </h2>
+
+                <div class="buttonGroup">
+
+                    <button id="yesHeartBtn">
+
+                        ❤️ Yes
+
+                    </button>
+
+                    <button id="noHeartBtn">
+
+                        🥹 No
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             ENDING
+        =========================== -->
+
+        <section class="page"
+                 id="endingPage">
+
+            <div class="card">
+
+                <h2 id="endingTitle"></h2>
+
+                <p id="endingMessage"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========= AUDIO ========= -->
+
+    <audio id="bgMusic"
+           loop>
+
+        <source src="music.mp3"
+                type="audio/mpeg">
+
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
